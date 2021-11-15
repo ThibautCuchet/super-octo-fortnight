@@ -8,6 +8,7 @@ class Db
     {
         try {
 	    $db_string = parse_url(getenv("DATABASE_URL"));
+	    echo($db_string);
             $this->_db = new PDO("pgsql:" . sprintf(
 		    "host=%s;port=%s;user=%s;password=%s;dbname=%s",
 		    $db_string["host"],
